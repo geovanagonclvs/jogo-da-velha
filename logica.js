@@ -119,16 +119,40 @@ function jogada1(){
 
      function verificarGanhador(){
 
-         
-        if(tabuleiro[0][j] && tabuleiro[1][j] && tabuleiro[2][j]){
- 
+        
+        
+         for(let i=0 ; i<3 ; i++)
+            { if(tabuleiro[i][0] !==0 && tabuleiro[i][1] && tabuleiro[i][1] == tabuleiro [i][2]){
+                alert("Parabéns!Você ganhou")
+            }
         }
+        for(let j=0; j<3 ; j++){
 
-        if(tabuleiro[linhaEscolhida][colunaEscolhida] == jogador1){
-            alert("Você venceu!")
+            if(tabuleiro[0][j] !== 0 &&  tabuleiro[1][j] && tabuleiro[1][j] == tabuleiro[2][j])
+                
+                {
+                    alert("Parabéns!Você ganhou")
+                }
+                
+            }
+
+           
+            
+            
+            if(
+                tabuleiro[0][0] !== 0 && tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][2]
+            ){
+                alert("Parabéns!Você ganhou")
+            }
+            
+            if(tabuleiro[0][2] !== 0 &&tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][0]){
+                alert("Parabéns!Você ganhou")
+            }
+            
         }
-     }
-
+        
+        
+    
      function exibir(){
          let tabela = '<table cellpadding ="10" border="1">'
          let board= document.getElementById("board")
