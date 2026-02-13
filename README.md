@@ -3,7 +3,7 @@ Iniciei criando as váriavés que não podem ser apagadas depois das jogadas, po
 
 - 'let tabuleiro=[]': cria o nosso array que irá armazenar nossa matriz 3x3
 - 'const jogador1=1': numera o jogador 1 como 1
-- 'const jogador2=2': numero o jogador 2 como 2
+- 'const jogador2=2': numera o jogador 2 como 2
 
 **obs**: usei a palavra-chave **const** para declarar nosssa variável pois esses valores serão fixos e não muradão conforme as jogadas
 
