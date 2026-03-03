@@ -24,6 +24,34 @@ body{
   
 }
 
+.textoLinha{
+    position: relative;
+    top: 12px
+}
 
+.linha{
+
+    position: relative;
+    top: 12px;
+}
+
+.textoColuna{
+    position:relative;
+    top: 30px;
+}
+
+.coluna{
+
+    position: relative;
+    top: 30px;
+}
+
+.botao{
+
+    margin: 300px;
+    width: 100px ;
+    position: relative;
+    top:-100px;
+}
 
 
