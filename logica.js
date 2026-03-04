@@ -3,7 +3,8 @@
     let tabuleiro=[]
     const jogador1=1
     const jogador2=2
-    
+    let linhaEscolhida = 0
+    let colunaEscolhida = 0
 
     // função responsável por criar o tabuleiro lógico sempre que a página for carregada
 function iniciar(){ 
@@ -27,8 +28,8 @@ function iniciar(){
 
 // função responsável por criar a tabela com os valores que o jogador 1 escolheu
 function jogada1(){
-     let linhaEscolhida  = document.getElementById('inputLinha').value - 1
-     let colunaEscolhida = document.getElementById('inputColuna').value - 1
+      linhaEscolhida  = document.getElementById('inputLinha').value - 1
+      colunaEscolhida = document.getElementById('inputColuna').value - 1
 
 
     // parte que interropemos a jogada do jogador 1 caso a linha e coluna já estejam preenchidas
@@ -47,6 +48,7 @@ function jogada1(){
         tabuleiro [linhaEscolhida][colunaEscolhida] = jogador1
     } else{
         alert("Jogada Inválida! A casa já está preenchida")
+        return;
     }
 
      console.log(tabuleiro)
@@ -91,8 +93,8 @@ function jogada1(){
 
      function jogada2(){
 
-        let linhaEscolhida = Math.random()*tabuleiro.length
-        let colunaEscolhida = Math.random()*tabuleiro.length
+         linhaEscolhida = Math.random()*tabuleiro.length
+         colunaEscolhida = Math.random()*tabuleiro.length
 
         let numeroInteiroLinha = Math.floor(linhaEscolhida)
         let numeroInteiroColuna = Math.floor(colunaEscolhida)
@@ -122,7 +124,8 @@ function jogada1(){
         
         
          for(let i=0 ; i<3 ; i++)
-            { if(tabuleiro[i][0] !==0 && tabuleiro[i][1] && tabuleiro[i][1] == tabuleiro [i][2]){
+            {
+                 if(tabuleiro[i][0] !==0 && tabuleiro[i][1] && tabuleiro[i][1] == tabuleiro [i][2]){
                 alert("Parabéns!Você ganhou")
             }
         }
@@ -139,13 +142,13 @@ function jogada1(){
            
             
             
-            if(
-                tabuleiro[0][0] !== 0 && tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][2]
-            ){
+            if(tabuleiro[0][0] !== 0 && tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][2])
+            {
+             
                 alert("Parabéns!Você ganhou")
             }
             
-            if(tabuleiro[0][2] !== 0 &&tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][0]){
+            if(tabuleiro[0][2] !== 0 && tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][0]){
                 alert("Parabéns!Você ganhou")
             }
             
